@@ -43,7 +43,10 @@ async function getAvailableMenus() {
 		{ fullyAvailable: [], partiallyAvailable: [] }
 	);
 
-	return [result.fullyAvailable, result.partiallyAvailable];
+	return {
+		full: result.fullyAvailable, 
+		part: result.partiallyAvailable
+	}
 }
 
 module.exports = { getAvailableMenus }
